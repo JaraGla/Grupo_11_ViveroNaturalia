@@ -14,5 +14,5 @@
 ## Dejar de hacer
 - Alargar los plazos de revisión, tenemos que hacer las tareas con mayor anticipación.
 
-
+![estrella de mar]
 
