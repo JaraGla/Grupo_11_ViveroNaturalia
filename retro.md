@@ -4,7 +4,7 @@
 - Pedir una reunión con los profesores para las entregas y un feedback del avance semanal 
 ## Hacer más
 - Análisis detallado en las consignas del sprint.
-- E identificar temas que no se entienden o necesitan mas dedicación y asesoria del profe
+- Identificar temas que no se entienden o necesitan mas dedicación y asesoria con el profesor
 - Priorizar las actividades que podrían generar retrasos considerables
 ## Continuar haciendo
 - Seguir investigando y consultando el material de clase que pueda aplicar al proyecto
