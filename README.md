@@ -29,5 +29,5 @@ Gladis Jaramillo - Ingeniera de Sistemas - Auditora de Tecnología con habilidad
 ### ***Tablero de trabajo***
 [Trello](https://trello.com/b/breokfto/vivero-naturalia)
 
-## Home
+
 
