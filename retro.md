@@ -14,5 +14,5 @@
 ## Dejar de hacer
 - Alargar los plazos de revisión, tenemos que hacer las tareas con mayor anticipación.
 
-![estrella de mar]
+![estrella de mar] (https://github.com/JaraGla/Grupo_11_ViveroNaturalia/blob/main/Retro%20del%20Sprint%201.bmp)
 
