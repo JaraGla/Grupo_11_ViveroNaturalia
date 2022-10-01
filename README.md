@@ -1,21 +1,33 @@
 # Grupo_11_ViveroNaturalia
-Proyecto Integrador Grupo 11
+---
+Proyecto Integrador
+---
 
-2) Descripción de productos y servicios del sitio
-Vivero Naturalia, ofrece diferentes productos y servicios destacados para cualquier espacio interior, exterior, dando gusto a las necesidades del pubico en general. Cada uno de los productos son naturales, producidos en
-nuestros sembrados, granjas, y ayudando al crecimiento de la economia campesina de la región.  Complementamos nuestro catalogo con productos y servicios de capacitación en sembrado y cuidado de jardinera casera. 
+## ***Bienvenidos a Vivero Naturalia***
 
-En el sitio web encontraremos categorizados las plantas segun el espacio (interior, exterior), arboles, materos, combos (plantas y materos), insumos: abonos y fertilizantes, semillas, herramientas, tarjetas regalo, videos, cursos y tips de 
-cuidado. 
+---
+### Descripción de productos y servicios del sitio
 
-El sitio va dirigido a todo el publico en general, hombres, mujeres, niños, ancianos amantes de las plantas, el jardin las flores y quieran mantener sus lugares llenos de color y naturaleza, 
+Tenemos a disposición esta página creada y realizada para los amantes de la naturelaza y quieran ambientar sus hogares y espacios de colores y aire del campo con prodcutos productos y servicios destacados para cualquier espacio interior, exterior, dando gusto a las necesidades del pubico en general. Cada uno de los productos son cultivados en nuestros sembrados, granjas del campo ayudando al crecimiento de la economia campesina de la región. 
+
+El sitio va dirigido a todo el publico en general, hombres, mujeres, niños, ancianos amantes de las plantas, el jardin las flores y quieran tener en sus lugares llenos de color y naturaleza. 
+
+### Que productos encuentras en el sitio:
+--
+En el sitio web encontraremos categorizados las plantas segun el espacio (interior, exterior), arboles, materos, combos (plantas y materos), insumos: abonos y fertilizantes, semillas, herramientas, tarjetas regalo, videos, cursos y tips de cuidado. Productos como: especies de arboles, plantas para interior y exterior, suculentas, bonsai, rosas, plantas de flores,  maceteros, semillas, insumos, fertilizantes, plaguicidas,  canastas, y complementamos nuestro catalogo con productos y servicios de capacitación en sembrado y cuidado de jardinera casera. 
+
+ ### ****Páginas referentes del mercado****: 
  
-
-3)Referentes del mercado:
- https://www.viverotierranegra.com/: Es la pagina mas completa tiene diferentes productos de los que quiero ofrecer especialmente en los abonos y fertilizantes, mas la variedad de plantas
- https://www.viverolasbrujas.cl/ : El diseño de la página me gusto no es muy cargada de elementos y es facil para un publico mayor de edad. 
- https://www.viveroflorecer.co/ : Tienen una gran variedad de flores con muchos colores y una excelente segmentación de los productos, me gusto que incorporan videos para enseñar a los clientes de como cuidar las plantas.
-
+ * Por la variedad de productos, imagenes, con diversidad de  productos de abonos y fertilizantes: [Vivero mi Tierra](https://www.viverotierranegra.com/) 
+ * Contiene elementos sobrios y fáciles para un publicos de la tercera edad y niños: [Vivero las Brujas - Chile](https://www.viverolasbrujas.cl/)
+ * Su diseño tiene gran variedad de flores llena de colores y segmentación de los productos,tiene incorporado videos: [Vivero Florecer](https://www.viveroflorecer.co/)     
  
- Integrante:
- Gladis Jaramillo - Ingeniera de Sistemas - Auditora de Tecnología con habilidades de desarrollo 
+ ### Integrante:
+---
+Gladis Jaramillo - Ingeniera de Sistemas - Auditora de Tecnología con habilidades de desarrollo 
+
+### ***Tablero de trabajo***
+[Trello](https://trello.com/b/breokfto/vivero-naturalia)
+
+
+
