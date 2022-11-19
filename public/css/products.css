@@ -1,0 +1,59 @@
+.sub-links-container  {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+.sub-links-plantas-img {
+    width: 300px;
+    height: 200px;
+    margin: 0 5px;
+    position: relative;
+  }
+  
+  .sub-links-plantas {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  
+  .sub-links-plantas > label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgb(119, 0, 255);
+    font-size: 40px;
+    z-index: 10;
+  }
+
+  /* Media Querys para todos los dispositivos */
+  @media (min-width: 768px) {
+    .sub-links-container {
+      display: flex;
+      justify-content: space-between;
+     width: 100%;
+    }
+    .sub-links-plantas {
+      width: 45%;
+    }
+    .sub-links-plantas {
+      width: 45%;
+    }
+   
+  }
+  
+  
+  @media (min-width: 992px) {
+    .sub-links-container {
+      display: flex;
+      align-items: center;
+    }
+    .sub-links-plantas {
+      width: 25%;
+    }
+    .sub-links-plantas {
+      width: 80%;
+    }
+  }
+  

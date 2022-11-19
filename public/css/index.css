@@ -1,464 +1,125 @@
-@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
-
+/* recursos: selector global */
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  box-sizing: border-box; /*cuando trabajo con elementos de caja, el border en vez de sumar restan */
+  box-sizing: border-box;
+  margin: 0; /* todos los recursos que tienen margen los elimino*/
+  padding: 0; /* todos los reursos que tienen padding los elimino * etiquetas 8 px*/
 }
-html {
-	font-size: 10px;
-	font-family: 'Montserrat', sans-serif;
-	scroll-behavior: smooth;
+
+.container{
+  width: 100%;
+  margin: 0 auto;
 }
+ul {
+  list-style-type: none; /* no quiero viñetas*/
+}
+
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 img {
-	/*border-radius: 50%;*/
-	width:100px;
-	height:100px;
-	margin-left: 0px;
+  width: 100%; /*toma el 100% del newport*/
+  
 
+}
+
+.encabezado {
+  text-align: center;
+}
+nav.menuIzquierdo ul li a,
+nav.menuDerecho ul li a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem; /*1rem = 16px*/
+  color: black;
+}
+
+nav.menuIzquierdo ul li a:hover,
+nav.menuDerecho ul li a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+/*media query para los tipos de dispositivo*/
+
+@media (min-width: 768px) {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+   width: 100%;
   }
-/*Definiciones Contenedor de Index*/
-.container {
-	min-height: 50vh;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-
-}
-/*Estilo del parrafo del centro de la pagina */
-/*Interlineado de los productos*/
-p {
-	color: rgb(0, 0, 0);
-	font-size: 1.4rem;
-	margin-top: 5px;
-	line-height: 2rem;
-	font-weight: 300;
-	letter-spacing: 0.05rem;
+  .menuIzquierdo {
+    width: 45%;
+  }
+  .menuDerecho {
+    width: 45%;
+  }
+  .opcionesDerecho {
+    display: flex;
+    justify-content: space-around;
+  }
+  .opcionesIzquierdo {
+    display: flex;
+    justify-content: space-around;
+  }
+  nav.menuIzquierdo ul li a,
+  nav.menuDerecho ul li a {
+    font-size: 1.1rem;
+  }
 }
 
-/*Estilo del Titulo centro de la pagina (Escuela de Cocteleria) */
-.section-title {
-	font-size: 4rem;
-	font-weight: 300;
-	color: rgb(0, 5, 159);
-	margin-bottom: 10px;
-	text-transform: uppercase;
-	letter-spacing: 0.50rem;
-	text-align: center;
+@media (min-width: 992px) {
+  .encabezado {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    width: 25%;
+  }
+  .menu {
+    width: 80%;
+  }
 }
-
-/*Estilo de la caja */
-.caja {
-	display: inline-block;
-	color: white;
-	border: 2px solid rgb(157, 220, 20);
-	margin-top: 1px;
-}
-/*animacion cuando se pasa el cursor por las cajas*/
-
-.caja:hover {
-	color: rgb(7, 169, 228);
-	background-color: rgb(120, 187, 184);
-}
-
-/*Color del textos del encabezado y pie de pagina*/
-.brand h1 {
-	font-size: 3rem;
-	text-transform: uppercase;
-	color: rgb(137, 136, 187);
-}
-/*Color del textos de las inciales de encabezado y pie de pagina*/
-.brand h1 span {
-	color: rgb(255, 255, 255);
-}
-
-/* Header section  Fija la barra de navegación superior*/
-
-#header {
-	position: fixed;
-	z-index: 1000;
-	left: 0;
-	top: 0;
-	width: 100vw;
-	height: auto;
-}
-/*Color de la barra superior*/
-
-#header .header {
-	min-height: 8vh;
-	background-color: #18627f;
-}
-/*Estilo de la barra superior*/
-#header .nav-bar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	height: 100%;
-	max-width: 1300px;
-	padding: 0 10px;
-}
-/*Menú Hambuguesa */
-
-#header .nav-list ul {
-	list-style: none;
-	position: absolute;
-	background-color: rgb(31, 30, 30);
-	width: 100vw;
-	height: 100vh;
-	left: 100%;
-	top: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-	overflow-x: hidden;
-	transition: 0.5s ease left;
-}
-#header .nav-list ul.active {
-	left: 0%;
-}
-
-/*Color de texto del menú superior*/
-#header .nav-list ul a {
-	font-size: 2.5rem;
-	font-weight: 500;
-	color: #FFFFFF;
-	padding: 10px;
-	display: block;
-}
-/*Menu hamburguesa en <170 px*/
- #header .nav-list ul a::after {
-	content: attr(data-after);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(0);
-	color: rgba(240, 248, 255, 0.021);
-	font-size: 13rem;
-	letter-spacing: 50px;
-	z-index: -1;
-	transition: 0.3s ease letter-spacing;
-} 
- #header .nav-list ul li:hover a::after {
-	transform: translate(-50%, -50%) scale(1);
-	letter-spacing: initial;
-} 
-/*Cambia de color cuando se da clic en el menú en modo celular*/
-#header .nav-list ul li:hover a {
-	color: rgb(21, 1, 202);
-} 
-#header .hamburger {
-	height: 60px;
-	width: 60px;
-	display: inline-block;
-	border: 3px solid white;
-	border-radius: 50%;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 100;
-	cursor: pointer;
-	transform: scale(0.8);
-	margin-right: 20px;
-}
-#header .hamburger:after {
-	position: absolute;
-	content: '';
-	height: 100%;
-	width: 100%;
-	border-radius: 50%;
-	border: 3px solid white;
-	animation: hamburger_puls 1s ease infinite;
-}
-#header .hamburger .bar {
-	height: 2px;
-	width: 30px;
-	position: relative;
-	background-color: white;
-	z-index: -1;
-}
-#header .hamburger .bar::after,
-#header .hamburger .bar::before {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	background-color: white;
-	transition: 0.3s ease;
-	transition-property: top, bottom;
-}
-#header .hamburger .bar::after {
-	top: 8px;
-}
-#header .hamburger .bar::before {
-	bottom: 8px;
-}
-#header .hamburger.active .bar::before {
-	bottom: 0;
-}
-#header .hamburger.active .bar::after {
-	top: 0;
-}
-/* End Header section */
-
-/* Section Color del body*/
-#init {
-
-	background-color: rgb(48, 216, 225);
-	position:relative;
-	width: 100%;
-}
-/* Efecto degradado del color de body */
-#init::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-color: rgb(181, 160, 160);
-	opacity: 0.5;
-}
-/* End init Section */
-
-/* Services Section */
-/* Centro de la pagina */
-#services .services {
-	flex-direction: column;
-	text-align: center;
-	max-width: 600px;
-}
-/* Decripción del texto principal del centro */
-
-#services .service-top {
-	max-width: 900px;
-}
-/* Diseño de las cajas grandes del centro de la pagina */
-
-#services .service-bottom {
-	display:flex;
-	align-items:stretch;
-	justify-content:space-around;
-	flex-wrap:wrap;
-	margin-top: 1px;
-	margin-bottom: 1px;
-}
-/* Estilo de las cajas del centro de la pagina */
-
-#services .service-item {
-	display:flex;
-	align-items:center;
-	justify-content:space-around;
-	flex-direction:column;
-	padding: 30px;
-	border-radius: 180px;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-}
-/* Estilo de las cajas del centro de la pagina */
-#services .service-item::after {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #000000cc 0%, #6799cb 100%);
-	opacity: 0.9;
-	z-index: -1;
-}
-/* Estilo de las imagenes pequeñas del centro de la pagina */
-#services .service-bottom .icon {
-	height: 80px;
-	width: 80px;
-	margin-bottom: 5%;
-	
-}
-/* Color del titulo del texto de la caja de centro */
-#services .service-item h2 {
-	font-size: 22px;
-	color: white;
-	margin-bottom: 20px;
-	text-transform: uppercase;
-}
-/* Color del texto de la caja de centro */
-#services .service-item p {
-	color: rgb(243, 249, 250);
-	text-align: center;
-}
-
-#services .service-item .caja {
-	width: 8vw;
-	border: solid 2px red;
-	padding: 0.2vw;
-	margin: 0.3vw;
-}
-/* End Services Section */
-
-/* Projects section, contenido de proyectos recientes*/
-#projects .projects {
-	flex-direction:column;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 20px 0;
-}
-/*Margen entre el titulo y las imagenes*/
-#projects .projects-header h4 {
-	margin-bottom: 28px;
-}
-
-/*Imagen del centro*/
-#projects .project-img {
-	overflow:hidden;
-	position:relative;
-	background-color: #ff0505df;
-}
-/*Colores de degradación sobre la imagen*/
-#projects .project-img:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(70deg, #1777df 90%, #6ef4c1 100%);
-	opacity: 0.4;
-}
-#projects .project-img img {
-	transition: 0.8s ease transform;
-}
-#projects .project-item:hover .project-img img {
-	transform: scale(1.1);
-}
-/* End Projects section */
-
-
 /* Footer Color del footer degradado*/
 #footer {
-	background-image: linear-gradient(60deg, #7f1832 10%, #485563 80%);
+    background-image: linear-gradient(60deg, #187f69 10%, #485563 80%);
+
 }
 /*Diseño de footer*/
 #footer .footer {
-	min-height: 100px;
-	flex-direction:column;
-	padding-top: 1%;
-	padding-bottom: 1%;
-
+  min-height: 100px;
+  flex-direction: column;
+  padding-top: 1%;
+  padding-bottom: 1%;
+ 
+    
 }
 /*Color de texto de footer*/
 #footer h2 {
-	color: white;
-	font-weight: 500;
-	font-size: 1.8rem;
-	letter-spacing: 0.1rem;
-	margin-top: 20px;
-	margin-bottom: 10px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 /*Iconos de redes sociales*/
 #footer .social-icon {
-	display: flex;
-	margin-bottom: 5px;
-	;
+  display: flex;
+  margin-bottom: 5px;
 }
 /*Tamaño y distacia entre los botones*/
 #footer .social-item {
-	height: 50px;
-	width: 50px;
-	margin: 0 10px;
-	margin-bottom: 2%;	
+  height: 50px;
+  width: 50px;
+  margin: 0 10px;
+  margin-bottom: 2%;
 }
 
 /*Derechos de autor*/
 #footer p {
-	color: white;
-	font-size: 1.3rem;
+  color: white;
+  font-size: 1.3rem;
 }
+
 /* End Footer */
 /* Media Query For Tablet */
-@media only screen and (min-width: 768px) {
-	.caja {
-		font-size: 2.5rem;
-		padding: 20px 60px;
-	}
-	h1.section-title {
-		font-size: 6rem;
-	}
-
-	/* init */
-	#init h1 {
-		font-size: 7rem;
-	}
-	/* End init */
-
-	/* Services Section */
-	#services .service-bottom .service-item {
-		flex-basis: 45%;
-		margin: 2.5%;
-	}
-	/* End Services Section */
-
-	/* Project */
-	#projects .project-item {
-		flex-direction: row;
-	}
-	#projects .project-item:nth-child(even) {
-		flex-direction: row-reverse;
-	}
-	#projects .project-item {
-		height: 400px;
-		margin: 0;
-		width: 100%;
-		border-radius: 0;
-	}
-	#projects .all-projects .project-info {
-		height: 100%;
-	}
-	#projects .all-projects .project-img {
-		height: 100%;
-	}
-	/* End Project */
-
-/* End Media Query For Tablet */
-
-/* Media Query For Desktop */
-@media only screen and (min-width: 1200px) {
-	/* header */
-	#header .hamburger {
-		display: none;
-	}
-	#header .nav-list ul {
-		position: initial;
-		display: block;
-		height: auto;
-		width: fit-content;
-		background-color: transparent;
-	}
-	#header .nav-list ul li {
-		display: inline-block;
-	}
-	#header .nav-list ul li a {
-		font-size: 1.8rem;
-	}
-	#header .nav-list ul a:after {
-		display: none;
-	}
-	/* End header */
-
-	#services .service-bottom .service-item {
-		flex-basis: 22%;
-		margin: 1.5%;
-	}
-}
-}
-/* End  Media Query For Desktop */

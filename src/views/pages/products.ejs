@@ -1,0 +1,177 @@
+<%- include('../partials/head.ejs') %> <%- include('../partials/header.ejs') %>
+<h1>From Products</h1>
+
+<!-- init Section  -->
+
+<div class="container-fluid">
+  <div
+    id="carouselExampleControls"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src. o="/img/bannerI4.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item active">
+        <img src="/img/bannerI3.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="/img/bannerI5.jpg" class="d-block w-100" alt="..." />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<!-- End init Section  -->
+
+<!-- Navbar -->
+<h1 class="productTitle">Todas Nuestras Plantas</h1>
+
+<nav>
+  <ul class="sub-links-container">
+    <li>
+      <a class="sub-links-plantas" href="/pl-ex">
+        <label for="">Plantas Exteriores</label
+        ><img
+          class="sub-links-plantas-img"
+          data-title=""
+          src="/img/exteriores/PE-Arbol-Guayacan-Carrapo.jpg"
+          alt=""
+        />
+      </a>
+    </li>
+    <li>
+      <a class="sub-links-plantas" href="/pl-in">
+        <label for="">Plantas Interiores</label
+        ><img
+          class="sub-links-plantas-img"
+          data-title=""
+          src="/img/Interiores/bromelia-13-600x600.jpg"
+          alt=""
+      /></a>
+    </li>
+    <li>
+      <a class="sub-links-plantas" href="/pl-ma">
+        <label for="">Materas</label
+        ><img
+          class="sub-links-plantas-img"
+          data-title=""
+          src="/img/Materos/M-bahia-amarillo.jpg"
+          alt=""
+        />
+      </a>
+    </li>
+    <li>
+      <a class="sub-links-plantas" href="/insumos">
+        <label for="">Insumos</label
+        ><img
+          class="sub-links-plantas-img"
+          data-title=""
+          src="/img/insumos y herramientas/h-setcompleto.jpg"
+          alt=""
+      /></a>
+    </li>
+  </ul>
+</nav>
+<!-- Navbar -->
+
+<!-- CREATE -->
+<form>
+  <form>
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        aria-describedby="emailHelp"
+        placeholder="Nombre"
+      />
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripcion</label>
+      <input
+        type="text"
+        class="form-control"
+        id="descripcion"
+        placeholder="Password"
+      />
+    </div>
+    <div class="form-group">
+      <label for="precio">Precio</label>
+      <input
+        type="text"
+        class="form-control"
+        id="precio"
+        placeholder="Password"
+      />
+    </div>
+    <div class="form-group">
+      <label for="categoria">Categoria</label>
+      <input
+        type="text"
+        class="form-control"
+        id="categoria"
+        placeholder="Password"
+      />
+    </div>
+    <div class="form-group">
+      <label for="etiqueta">Etiqueta</label>
+      <input
+        type="text"
+        class="form-control"
+        id="etiqueta"
+        placeholder="Password"
+      />
+    </div>
+    <div class="form-group">
+      <label for="imagen">Imagen</label>
+      <input
+        type="text"
+        class="form-control"
+        id="imagen"
+        placeholder="Password"
+      />
+    </div>
+    <div>
+      <button id="btnCreate">Crear Producto</button>
+    </div>
+  </form>
+</form>
+<!-- CREATE -->
+
+<!-- LIST -->
+<div style="margin-left: 50px">
+  <% data.map(item=>{ %>
+
+  <h5><%= item.id %></h5>
+  <h1><%= item.nombre %></h1>
+  <h4><%= item.precio %></h4>
+  <h4><%= item.categoria %></h4>
+  <h4><%= item.etiqueta %></h4>
+
+  <% }) %>
+</div>
+<!-- LIST -->
+
+<script src="/js/products.js"></script>
+<%- include('../partials/footer.ejs') %>
