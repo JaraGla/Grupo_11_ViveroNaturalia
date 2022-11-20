@@ -5,11 +5,15 @@ const {
   guardarProducto,
   editarProducto,
   buscarProductoPorId,
+  borrarProducto,
+  obtenerProductos,
 } = require("../controllers/products.controller.js");
 
-productRoute.get("/products", listaproductController);
-productRoute.post("/api/productos", guardarProducto);
-productRoute.put("/api/productos", editarProducto);
-productRoute.get("/api/productos/:id", buscarProductoPorId);
+productRoute.get("/productos", listaproductController);
+productRoute.post("/productos", guardarProducto);
+productRoute.put("/productos", editarProducto);
+productRoute.delete("/productos/:id", borrarProducto);
+productRoute.get("/api/productos/list", obtenerProductos);
+productRoute.get("/productos/:id", buscarProductoPorId);
 
 module.exports = productRoute;

@@ -1,0 +1,12 @@
+<div id="lista_productos" style="margin-left: 50px">
+    
+  <% data.map(item=>{ %>
+
+  <h5><%= item.id %></h5>
+  <h1><%= item.nombre %></h1>
+  <h4><%= item.precio %></h4>
+  <h4><%= item.categoria %></h4>
+  <h4><%= item.etiqueta %></h4>
+
+  <% }) %>
+</div>

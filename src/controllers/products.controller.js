@@ -2,13 +2,17 @@ const path = require("path");
 const fs = require("fs");
 
 const listaproductController = (req, res) => {
+  res.render("pages/products", {
+    stylePath: "products",
+  });
+};
+
+const obtenerProductos = async (req, res) => {
   const plantasDelArchivoJSON = JSON.parse(
     fs.readFileSync(path.resolve(__dirname, "..", "database", "plantas.json"))
   );
-  res.render("pages/products", {
-    data: plantasDelArchivoJSON,
-    stylePath: "products",
-  });
+
+  res.json(plantasDelArchivoJSON);
 };
 
 const guardarProducto = async (req, res) => {
@@ -16,7 +20,10 @@ const guardarProducto = async (req, res) => {
   const productos = await JSON.parse(
     fs.readFileSync(path.resolve(__dirname, "..", "database", "plantas.json"))
   );
-  nuevoProducto.id = Math.random();
+
+  const ultimoProducto = productos[productos.length - 1];
+  console.log(ultimoProducto);
+  nuevoProducto.id = String(Number(ultimoProducto.id) + 1);
   const nuevosProductos = [...productos, nuevoProducto];
   const product = await fs.writeFileSync(
     path.resolve(__dirname, "..", "database", "plantas.json"),
@@ -68,9 +75,30 @@ const buscarProductoPorId = async (req, res) => {
   });
 };
 
+const borrarProducto = async (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  const productos = await JSON.parse(
+    fs.readFileSync(path.resolve(__dirname, "..", "database", "plantas.json"))
+  );
+
+  const productoEliminado = productos.find((prod) => prod.id == id);
+
+  const nuevosProductos = productos.filter((prod) => prod.id !== id);
+
+  fs.writeFileSync(
+    path.resolve(__dirname, "..", "database", "plantas.json"),
+    JSON.stringify(nuevosProductos).toString()
+  );
+
+  res.json({ ...productoEliminado, mensaje: "Prodcuto eliminado!" });
+};
+
 module.exports = {
   guardarProducto,
   listaproductController,
   editarProducto,
   buscarProductoPorId,
+  borrarProducto,
+  obtenerProductos,
 };
